@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -12,65 +13,86 @@
         
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #050b14;
-            color: #f1f5f9;
+            background-color: #020617;
+            color: #f8fafc;
             overflow-x: hidden;
         }
 
-        @keyframes vibrantPulse {
-            0%, 100% { box-shadow: 0 0 45px rgba(20, 184, 166, 0.7), 0 0 15px rgba(245, 158, 11, 0.4); transform: scale(1); }
-            50% { box-shadow: 0 0 90px rgba(45, 212, 191, 0.95), 0 0 30px rgba(245, 158, 11, 0.7); transform: scale(1.02); }
+        /* Ultra Premium Glowing Animations */
+        @keyframes superGlow {
+            0%, 100% { box-shadow: 0 0 40px rgba(16, 185, 129, 0.5), inset 0 0 20px rgba(245, 158, 11, 0.2); transform: scale(1); }
+            50% { box-shadow: 0 0 80px rgba(52, 211, 153, 0.8), inset 0 0 40px rgba(245, 158, 11, 0.4); transform: scale(1.02); }
         }
-        .vibrant-glow { animation: vibrantPulse 3s infinite ease-in-out; }
+        .animate-super-glow { animation: superGlow 3s infinite ease-in-out; }
 
-        @keyframes floatAnim {
+        @keyframes floatCard {
             0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            50% { transform: translateY(-8px); }
         }
-        .float-effect { animation: floatAnim 4s infinite ease-in-out; }
+        .animate-float { animation: floatCard 4s infinite ease-in-out; }
 
-        .section-hero {
-            background-image: linear-gradient(to bottom, rgba(5, 11, 20, 0.82), rgba(5, 11, 20, 0.95)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
+        @keyframes scanBeam {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(1000%); }
         }
-
-        .section-modules {
-            background-image: linear-gradient(to bottom, rgba(5, 11, 20, 0.88), rgba(5, 11, 20, 0.97)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .section-team {
-            background-image: linear-gradient(to bottom, rgba(5, 11, 20, 0.86), rgba(5, 11, 20, 0.96)), url('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
+        .scanner-effect::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, transparent, #10b981, transparent);
+            animation: scanBeam 4s linear infinite;
         }
 
-        .section-founder {
-            background-image: linear-gradient(to bottom, rgba(5, 11, 20, 0.85), rgba(5, 11, 20, 0.96)), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
+        /* Corporate Backgrounds */
+        .bg-exec-hero {
+            background-image: linear-gradient(to bottom, rgba(2, 6, 23, 0.82), rgba(2, 6, 23, 0.95)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover; background-position: center;
+        }
+        .bg-ops-modules {
+            background-image: linear-gradient(to bottom, rgba(2, 6, 23, 0.88), rgba(2, 6, 23, 0.97)), url('https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover; background-position: center;
+        }
+        .bg-about-company {
+            background-image: linear-gradient(to bottom, rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.96)), url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover; background-position: center;
+        }
+        .bg-career-portal {
+            background-image: linear-gradient(to bottom, rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.96)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover; background-position: center;
+        }
+        .bg-team-workspace {
+            background-image: linear-gradient(to bottom, rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.96)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover; background-position: center;
+        }
+        .bg-founder-suite {
+            background-image: linear-gradient(to bottom, rgba(2, 6, 23, 0.82), rgba(2, 6, 23, 0.95)), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover; background-position: center;
         }
 
-        .ultra-founder-card {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(3, 7, 18, 0.97));
+        .luxury-card {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.98));
             backdrop-filter: blur(20px);
-            border: 2px solid rgba(45, 212, 191, 0.5);
-            box-shadow: 0 0 50px rgba(20, 184, 166, 0.25), inset 0 0 20px rgba(45, 212, 191, 0.1);
+            border: 2px solid rgba(16, 185, 129, 0.35);
+            box-shadow: 0 0 35px rgba(16, 185, 129, 0.15);
+            transition: all 0.4s ease;
+        }
+        .luxury-card:hover {
+            border-color: rgba(16, 185, 129, 0.8);
+            transform: translateY(-5px);
+            box-shadow: 0 0 50px rgba(16, 185, 129, 0.35);
         }
     </style>
 </head>
-<body class="antialiased min-h-screen flex flex-col justify-between selection:bg-teal-400 selection:text-black">
+<body class="antialiased min-h-screen flex flex-col justify-between selection:bg-emerald-400 selection:text-black">
 
     <!-- Top Live Ticker Bar -->
-    <div class="bg-gradient-to-r from-teal-900 via-slate-900 to-amber-950 text-teal-300 py-3 px-4 border-b border-teal-500/40 text-xs font-semibold">
+    <div class="bg-gradient-to-r from-emerald-950 via-slate-950 to-amber-950 text-emerald-300 py-3 px-4 border-b border-emerald-500/40 text-xs font-semibold">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             <div class="flex items-center space-x-2">
                 <span class="w-2.5 h-2.5 bg-emerald-400 rounded-full animate-ping"></span>
                 <span class="text-white font-bold">🚀 Restart AI Global Ecosystem Live — 25+ AI Recruitment Modules Operational</span>
             </div>
-            <div class="hidden md:block text-teal-200">
+            <div class="hidden md:block text-amber-300">
                 <span>Tinsukia, Assam • Global Talent Infrastructure</span>
             </div>
         </div>
@@ -80,24 +102,26 @@
     <header class="bg-slate-950/90 backdrop-blur-xl border-b border-slate-800 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-teal-400 to-emerald-400 border-2 border-teal-200 vibrant-glow flex items-center justify-center shadow-2xl">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-500 to-amber-400 border-2 border-emerald-200 animate-super-glow flex items-center justify-center shadow-2xl">
                     <span class="text-2xl font-black text-slate-950">R</span>
                 </div>
                 <div>
-                    <h1 class="text-xl font-black tracking-tight text-white">Restart <span class="text-teal-400">AI</span></h1>
+                    <h1 class="text-xl font-black tracking-tight text-white">Restart <span class="text-emerald-400">AI</span></h1>
                     <p class="text-[9px] text-amber-300 uppercase tracking-widest font-bold">Global Talent Ecosystem</p>
                 </div>
             </div>
-            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-200">
-                <a href="#hero" class="hover:text-teal-400 transition">Home</a>
-                <a href="#modules" class="hover:text-teal-400 transition">AI Modules</a>
-                <a href="#team" class="hover:text-teal-400 transition">Corporate Team</a>
-                <a href="#founder" class="hover:text-teal-400 transition">Founder Vision</a>
-                <a href="#contact" class="hover:text-teal-400 transition">Contact Us</a>
+            <nav class="hidden lg:flex items-center space-x-5 text-sm font-medium text-slate-200">
+                <a href="#hero" class="hover:text-emerald-400 transition">Home</a>
+                <a href="#about" class="hover:text-emerald-400 transition">About Us</a>
+                <a href="#modules" class="hover:text-emerald-400 transition">AI Modules</a>
+                <a href="#careers" class="hover:text-emerald-400 transition">Careers</a>
+                <a href="#team" class="hover:text-emerald-400 transition">Corporate Team</a>
+                <a href="#founder" class="hover:text-emerald-400 transition">Founder</a>
+                <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
             </nav>
             <div>
-                <a href="#modules" class="bg-gradient-to-r from-teal-400 to-emerald-400 hover:from-teal-300 hover:to-emerald-300 text-slate-950 text-xs font-black px-6 py-3 rounded-xl transition shadow-lg shadow-teal-500/30">
-                    Launch Platform
+                <a href="#careers" class="bg-gradient-to-r from-emerald-500 to-amber-400 hover:from-emerald-400 hover:to-amber-300 text-slate-950 text-xs font-black px-5 py-2.5 rounded-xl transition shadow-lg shadow-emerald-500/30">
+                    Apply Now
                 </a>
             </div>
         </div>
@@ -105,15 +129,15 @@
 
     <main class="flex-grow">
         <!-- 1. Hero Section -->
-        <section id="hero" class="relative section-hero py-32 px-4 text-center overflow-hidden">
+        <section id="hero" class="relative bg-exec-hero py-32 px-4 text-center overflow-hidden scanner-effect">
             <div class="max-w-4xl mx-auto flex flex-col items-center relative z-10">
-                <div class="inline-flex items-center space-x-2 bg-teal-500/15 text-teal-300 border border-teal-400/40 px-5 py-2 rounded-full text-xs font-bold mb-6 tracking-wider uppercase backdrop-blur-md float-effect">
+                <div class="inline-flex items-center space-x-2 bg-emerald-500/15 text-emerald-300 border border-emerald-400/40 px-5 py-2 rounded-full text-xs font-bold mb-6 tracking-wider uppercase backdrop-blur-md animate-float">
                     <i class="fa-solid fa-bolt text-amber-400 animate-pulse"></i>
                     <span>AI-Powered Career Restoration & Employment Portal</span>
                 </div>
 
-                <h2 class="text-5xl sm:text-7xl font-black text-white leading-tight tracking-tight mb-6 uppercase drop-shadow-[0_0_35px_rgba(20,184,166,0.5)]">
-                    RESTART <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-emerald-300 to-amber-300">(GLOBAL ECOSYSTEM)</span>
+                <h2 class="text-5xl sm:text-7xl font-black text-white leading-tight tracking-tight mb-6 uppercase drop-shadow-[0_0_35px_rgba(16,185,129,0.5)]">
+                    RESTART <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300">(GLOBAL ECOSYSTEM)</span>
                 </h2>
                 
                 <p class="text-lg sm:text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed mb-10 drop-shadow">
@@ -121,85 +145,167 @@
                 </p>
 
                 <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#modules" class="bg-gradient-to-r from-teal-400 via-emerald-400 to-cyan-400 hover:from-teal-300 hover:to-cyan-300 text-slate-950 text-lg font-black px-10 py-4 rounded-2xl shadow-2xl transform hover:scale-105 transition duration-300 vibrant-glow uppercase tracking-wider">
+                    <a href="#modules" class="bg-gradient-to-r from-emerald-500 via-teal-400 to-amber-400 hover:from-emerald-400 hover:to-amber-300 text-slate-950 text-lg font-black px-10 py-4 rounded-2xl shadow-2xl transform hover:scale-105 transition duration-300 animate-super-glow uppercase tracking-wider">
                         Explore Live AI Engine
                     </a>
-                    <a href="https://lnkd.in/djCVFgPT" target="_blank" class="bg-slate-900/90 hover:bg-slate-800 border border-teal-500/40 text-white font-bold px-8 py-4 rounded-2xl transition flex items-center space-x-2 backdrop-blur-md shadow-xl">
-                        <i class="fa-brands fa-linkedin text-teal-400 text-xl"></i>
+                    <a href="https://lnkd.in/djCVFgPT" target="_blank" class="bg-slate-900/90 hover:bg-slate-800 border border-emerald-500/40 text-white font-bold px-8 py-4 rounded-2xl transition flex items-center space-x-2 backdrop-blur-md shadow-xl">
+                        <i class="fa-brands fa-linkedin text-emerald-400 text-xl"></i>
                         <span>View on LinkedIn</span>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- 2. Live Interactive AI Modules Hub -->
-        <section id="modules" class="section-modules py-24 px-4 sm:px-6 lg:px-8 border-y border-teal-500/30 relative">
-            <div class="max-w-7xl mx-auto relative z-10">
+        <!-- 2. About Us Section -->
+        <section id="about" class="bg-about-company py-24 px-4 sm:px-6 lg:px-8 border-y border-emerald-500/30 relative">
+            <div class="max-w-6xl mx-auto relative z-10">
                 <div class="text-center max-w-2xl mx-auto mb-16">
-                    <span class="text-amber-400 text-xs font-bold tracking-widest uppercase mb-2 block">Interactive Testing Hub</span>
-                    <h3 class="text-3xl font-extrabold text-white mb-3">Live AI Employment & Recruitment Modules</h3>
-                    <p class="text-teal-200 text-sm">Experience ultra-responsive AI modules engineered for modern corporate talent acquisition.</p>
+                    <span class="text-amber-400 text-xs font-bold tracking-widest uppercase mb-2 block">Who We Are</span>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">About Restart AI Consultancy</h3>
+                    <p class="text-slate-300 text-sm">Founded in Tinsukia, Assam, Restart AI is pioneering global recruitment technology, ensuring that operational expertise and professional resilience are never sidelined by algorithmic bias.</p>
                 </div>
-
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Module 1: AI Gap Re-framer -->
-                    <div class="bg-slate-900/95 border border-teal-500/40 p-6 rounded-2xl shadow-2xl backdrop-blur-md hover:border-teal-400 transition transform hover:-translate-y-1">
-                        <div class="text-teal-400 text-xl font-bold mb-3"><i class="fa-solid fa-brain mr-2"></i> AI Gap Re-framer</div>
-                        <p class="text-slate-300 text-xs mb-4">Optimize career gaps into high-value crisis management leadership skills for corporate placement.</p>
-                        <input type="text" id="fName" placeholder="Candidate Name" value="Bishwajit Dohutia" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white mb-2 focus:outline-none focus:border-teal-400">
-                        <input type="text" id="fGap" placeholder="Career Gap Reason" value="Family Care" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white mb-3 focus:outline-none focus:border-teal-400">
-                        <button onclick="testFeatureProfile()" class="w-full bg-gradient-to-r from-teal-400 to-emerald-400 hover:from-teal-300 hover:to-emerald-300 text-slate-950 font-extrabold py-2.5 rounded-lg text-xs transition cursor-pointer shadow-lg shadow-teal-500/30">Run AI Re-framer</button>
-                        <div id="profileResult" class="mt-3 p-3 bg-slate-950 rounded-lg text-[11px] text-teal-300 border border-teal-500/30 hidden"></div>
+                    <div class="luxury-card p-8 rounded-2xl text-center">
+                        <div class="text-emerald-400 text-3xl mb-4 animate-float"><i class="fa-solid fa-bullseye"></i></div>
+                        <h4 class="text-white font-bold text-lg mb-2">Our Mission</h4>
+                        <p class="text-slate-400 text-xs leading-relaxed">To engineer transparent talent ecosystems that protect candidate dignity and enforce strict anti-ghosting corporate SLAs.</p>
                     </div>
-
-                    <!-- Module 2: ATS Scanner & Cover Letter -->
-                    <div class="bg-slate-900/95 border border-teal-500/40 p-6 rounded-2xl shadow-2xl backdrop-blur-md hover:border-teal-400 transition transform hover:-translate-y-1">
-                        <div class="text-teal-400 text-xl font-bold mb-3"><i class="fa-solid fa-file-shield mr-2"></i> ATS & Gap-Shield</div>
-                        <p class="text-slate-300 text-xs mb-4">Scan CV compatibility against corporate job descriptions and generate tailored AI cover letters.</p>
-                        <input type="text" id="fRole" placeholder="Target Corporate Role" value="Operations Lead" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white mb-3 focus:outline-none focus:border-teal-400">
-                        <div class="flex space-x-2">
-                            <button onclick="testFeatureATS()" class="w-1/2 bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold py-2.5 rounded-lg text-xs transition cursor-pointer shadow-lg">Scan ATS</button>
-                            <button onclick="testFeatureCoverLetter()" class="w-1/2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-2.5 rounded-lg text-xs transition cursor-pointer shadow-lg">Cover Letter</button>
-                        </div>
-                        <div id="atsResult" class="mt-3 p-3 bg-slate-950 rounded-lg text-[11px] text-teal-300 border border-teal-500/30 hidden whitespace-pre-line"></div>
+                    <div class="luxury-card p-8 rounded-2xl text-center">
+                        <div class="text-amber-400 text-3xl mb-4 animate-float"><i class="fa-solid fa-eye"></i></div>
+                        <h4 class="text-white font-bold text-lg mb-2">Our Vision</h4>
+                        <p class="text-slate-400 text-xs leading-relaxed">To become the world's leading career-gap neutralizer and AI-driven human resource consultancy startup.</p>
                     </div>
-
-                    <!-- Module 3: Security & Anti-Ghosting Protocols -->
-                    <div class="bg-slate-900/95 border border-teal-500/40 p-6 rounded-2xl shadow-2xl backdrop-blur-md hover:border-teal-400 transition transform hover:-translate-y-1 flex flex-col justify-between">
-                        <div>
-                            <div class="text-teal-400 text-xl font-bold mb-3"><i class="fa-solid fa-microchip mr-2"></i> Recruitment SLAs</div>
-                            <p class="text-slate-300 text-xs mb-4">Execute anti-ghosting heatmaps and neural CV masking to protect candidate privacy across 25+ modules.</p>
-                        </div>
-                        <div class="space-y-2">
-                            <button onclick="testGhostingHeatmap()" class="w-full bg-slate-800 hover:bg-slate-700 text-teal-300 font-semibold py-2.5 rounded-lg text-xs transition border border-teal-500/30 cursor-pointer shadow">🔥 Check Ghosting Heatmap</button>
-                            <button onclick="testCvMasking()" class="w-full bg-slate-800 hover:bg-slate-700 text-teal-300 font-semibold py-2.5 rounded-lg text-xs transition border border-teal-500/30 cursor-pointer shadow">🧠 Neural CV Masking</button>
-                        </div>
-                        <div id="uniqueFeatureOutput" class="mt-3 p-3 bg-slate-950 rounded-lg text-[11px] text-teal-300 border border-teal-500/30 hidden"></div>
+                    <div class="luxury-card p-8 rounded-2xl text-center">
+                        <div class="text-teal-400 text-3xl mb-4 animate-float"><i class="fa-solid fa-gem"></i></div>
+                        <h4 class="text-white font-bold text-lg mb-2">Core Values</h4>
+                        <p class="text-slate-400 text-xs leading-relaxed">Absolute fairness, operational integrity, data privacy, and relentless innovation in recruitment workflows.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 3. Corporate Team Working Together Section -->
-        <section id="team" class="section-team py-24 px-4 sm:px-6 lg:px-8 border-b border-teal-500/30 relative">
+        <!-- 3. Live AI Modules Hub -->
+        <section id="modules" class="bg-ops-modules py-24 px-4 sm:px-6 lg:px-8 border-b border-emerald-500/30 relative">
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-amber-400 text-xs font-bold tracking-widest uppercase mb-2 block">Interactive Testing Hub</span>
+                    <h3 class="text-3xl font-extrabold text-white mb-3">Live AI Employment & Recruitment Modules</h3>
+                    <p class="text-emerald-200 text-sm">Experience ultra-responsive AI modules engineered for modern corporate talent acquisition.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Module 1 -->
+                    <div class="luxury-card p-6 rounded-2xl shadow-2xl">
+                        <div class="text-emerald-400 text-xl font-bold mb-3"><i class="fa-solid fa-brain mr-2"></i> AI Gap Re-framer</div>
+                        <p class="text-slate-300 text-xs mb-4">Optimize career gaps into high-value crisis management leadership skills for corporate placement.</p>
+                        <input type="text" id="fName" placeholder="Candidate Name" value="Bishwajit Dohutia" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white mb-2 focus:outline-none focus:border-emerald-400">
+                        <input type="text" id="fGap" placeholder="Career Gap Reason" value="Family Care" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white mb-3 focus:outline-none focus:border-emerald-400">
+                        <button onclick="testFeatureProfile()" class="w-full bg-gradient-to-r from-emerald-500 to-amber-400 hover:from-emerald-400 hover:to-amber-300 text-slate-950 font-extrabold py-2.5 rounded-lg text-xs transition cursor-pointer shadow-lg">Run AI Re-framer</button>
+                        <div id="profileResult" class="mt-3 p-3 bg-slate-950 rounded-lg text-[11px] text-emerald-300 border border-emerald-500/30 hidden"></div>
+                    </div>
+
+                    <!-- Module 2 -->
+                    <div class="luxury-card p-6 rounded-2xl shadow-2xl">
+                        <div class="text-emerald-400 text-xl font-bold mb-3"><i class="fa-solid fa-file-shield mr-2"></i> ATS & Gap-Shield</div>
+                        <p class="text-slate-300 text-xs mb-4">Scan CV compatibility against corporate job descriptions and generate tailored AI cover letters.</p>
+                        <input type="text" id="fRole" placeholder="Target Corporate Role" value="Operations Lead" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white mb-3 focus:outline-none focus:border-emerald-400">
+                        <div class="flex space-x-2">
+                            <button onclick="testFeatureATS()" class="w-1/2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-2.5 rounded-lg text-xs transition cursor-pointer shadow-lg">Scan ATS</button>
+                            <button onclick="testFeatureCoverLetter()" class="w-1/2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-2.5 rounded-lg text-xs transition cursor-pointer shadow-lg">Cover Letter</button>
+                        </div>
+                        <div id="atsResult" class="mt-3 p-3 bg-slate-950 rounded-lg text-[11px] text-emerald-300 border border-emerald-500/30 hidden whitespace-pre-line"></div>
+                    </div>
+
+                    <!-- Module 3 -->
+                    <div class="luxury-card p-6 rounded-2xl shadow-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="text-emerald-400 text-xl font-bold mb-3"><i class="fa-solid fa-microchip mr-2"></i> Recruitment SLAs</div>
+                            <p class="text-slate-300 text-xs mb-4">Execute anti-ghosting heatmaps and neural CV masking to protect candidate privacy across 25+ modules.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <button onclick="testGhostingHeatmap()" class="w-full bg-slate-900 hover:bg-slate-800 text-emerald-300 font-semibold py-2.5 rounded-lg text-xs transition border border-emerald-500/30 cursor-pointer shadow">🔥 Check Ghosting Heatmap</button>
+                            <button onclick="testCvMasking()" class="w-full bg-slate-900 hover:bg-slate-800 text-emerald-300 font-semibold py-2.5 rounded-lg text-xs transition border border-emerald-500/30 cursor-pointer shadow">🧠 Neural CV Masking</button>
+                        </div>
+                        <div id="uniqueFeatureOutput" class="mt-3 p-3 bg-slate-950 rounded-lg text-[11px] text-emerald-300 border border-emerald-500/30 hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Career & Job Openings Section -->
+        <section id="careers" class="bg-career-portal py-24 px-4 sm:px-6 lg:px-8 border-b border-emerald-500/30 relative">
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-amber-400 text-xs font-bold tracking-widest uppercase mb-2 block">Join Our Ecosystem</span>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Career Openings & Talent Placement</h3>
+                    <p class="text-slate-300 text-sm">Explore corporate roles within Restart AI or submit your profile for premium client placements across Assam and global networks.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <div class="luxury-card p-6 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs bg-emerald-500/20 text-emerald-300 px-3 py-1 rounded-full font-semibold">Operations</span>
+                            <h4 class="text-white font-bold text-lg mt-3 mb-1">Senior Operations Lead</h4>
+                            <p class="text-amber-300 text-xs mb-3">📍 Tinsukia / Remote</p>
+                            <p class="text-slate-400 text-xs leading-relaxed mb-4">Manage candidate onboarding pipelines, client SLAs, and operational workflow efficiency.</p>
+                        </div>
+                        <button onclick="applyJob('Senior Operations Lead')" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-2.5 rounded-xl text-xs transition cursor-pointer shadow-lg">Apply Now</button>
+                    </div>
+
+                    <div class="luxury-card p-6 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs bg-teal-500/20 text-teal-300 px-3 py-1 rounded-full font-semibold">Artificial Intelligence</span>
+                            <h4 class="text-white font-bold text-lg mt-3 mb-1">AI Recruitment Specialist</h4>
+                            <p class="text-amber-300 text-xs mb-3">📍 Global / Remote</p>
+                            <p class="text-slate-400 text-xs leading-relaxed mb-4">Fine-tune ATS matching algorithms, gap re-framers, and anti-ghosting telemetry protocols.</p>
+                        </div>
+                        <button onclick="applyJob('AI Recruitment Specialist')" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-2.5 rounded-xl text-xs transition cursor-pointer shadow-lg">Apply Now</button>
+                    </div>
+
+                    <div class="luxury-card p-6 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs bg-amber-500/20 text-amber-300 px-3 py-1 rounded-full font-semibold">Corporate Relations</span>
+                            <h4 class="text-white font-bold text-lg mt-3 mb-1">Business Development Manager</h4>
+                            <p class="text-amber-300 text-xs mb-3">📍 Guwahati / Dibrugarh</p>
+                            <p class="text-slate-400 text-xs leading-relaxed mb-4">Forge strategic partnerships with multinational corporate enterprises and partner firms.</p>
+                        </div>
+                        <button onclick="applyJob('Business Development Manager')" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-2.5 rounded-xl text-xs transition cursor-pointer shadow-lg">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="luxury-card p-8 rounded-3xl max-w-3xl mx-auto text-center border-emerald-400/60">
+                    <h4 class="text-white font-bold text-xl mb-2">Can't find your exact role? Submit General CV</h4>
+                    <p class="text-slate-300 text-xs mb-6">Our AI will parse your skills and match you with suitable corporate openings instantly.</p>
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                        <input type="text" id="applicantName" placeholder="Full Name" class="bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-emerald-400 flex-grow">
+                        <input type="email" id="applicantEmail" placeholder="Email Address" class="bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-emerald-400 flex-grow">
+                        <button onclick="submitGeneralApplication()" class="bg-gradient-to-r from-emerald-500 to-amber-400 text-slate-950 font-black px-8 py-3 rounded-xl text-xs transition cursor-pointer shadow-xl">Submit CV</button>
+                    </div>
+                    <div id="careerNotice" class="mt-4 text-xs text-emerald-300 hidden"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Corporate Team Section -->
+        <section id="team" class="bg-team-workspace py-24 px-4 sm:px-6 lg:px-8 border-b border-emerald-500/30 relative">
             <div class="max-w-7xl mx-auto relative z-10 text-center">
-                <span class="text-teal-300 text-xs font-bold tracking-widest uppercase mb-2 block">Global Operations & Workforce</span>
+                <span class="text-amber-400 text-xs font-bold tracking-widest uppercase mb-2 block">Global Operations & Workforce</span>
                 <h3 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Corporate Operations & Expert Teams</h3>
                 <p class="text-slate-300 max-w-2xl mx-auto text-sm mb-12">Our cross-functional teams operate around the clock to bridge gaps, verify credentials, and connect top-tier talent with multinational enterprises.</p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-slate-900/90 border border-teal-500/30 p-6 rounded-2xl backdrop-blur-md shadow-xl">
-                        <div class="w-12 h-12 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center text-xl mb-4 mx-auto"><i class="fa-solid fa-users-gear"></i></div>
+                    <div class="luxury-card p-6 rounded-2xl shadow-xl">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl mb-4 mx-auto animate-float"><i class="fa-solid fa-users-gear"></i></div>
                         <h4 class="text-white font-bold text-base mb-2">Talent Operations Hub</h4>
                         <p class="text-slate-400 text-xs leading-relaxed">Dedicated recruiters and operators managing end-to-end candidate placements with zero bias.</p>
                     </div>
-                    <div class="bg-slate-900/90 border border-teal-500/30 p-6 rounded-2xl backdrop-blur-md shadow-xl">
-                        <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl mb-4 mx-auto"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="luxury-card p-6 rounded-2xl shadow-xl">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl mb-4 mx-auto animate-float"><i class="fa-solid fa-shield-halved"></i></div>
                         <h4 class="text-white font-bold text-base mb-2">Compliance & Gap Shield</h4>
                         <p class="text-slate-400 text-xs leading-relaxed">Ensuring absolute adherence to 7-day anti-ghosting SLAs and verified cryptographic credentials.</p>
                     </div>
-                    <div class="bg-slate-900/90 border border-teal-500/30 p-6 rounded-2xl backdrop-blur-md shadow-xl">
-                        <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl mb-4 mx-auto"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="luxury-card p-6 rounded-2xl shadow-xl">
+                        <div class="w-12 h-12 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center text-xl mb-4 mx-auto animate-float"><i class="fa-solid fa-chart-line"></i></div>
                         <h4 class="text-white font-bold text-base mb-2">Enterprise Solutions</h4>
                         <p class="text-slate-400 text-xs leading-relaxed">Delivering automated matching and neural CV parsing infrastructure to global partner firms.</p>
                     </div>
@@ -207,35 +313,34 @@
             </div>
         </section>
 
-        <!-- 4. Ultra Premium Founder Vision Section with Photo & Phone Number -->
-        <section id="founder" class="section-founder py-28 px-4 relative">
+        <!-- 6. Founder Suite Section -->
+        <section id="founder" class="bg-founder-suite py-28 px-4 relative">
             <div class="max-w-4xl mx-auto relative z-10">
-                <div class="ultra-founder-card p-8 sm:p-14 rounded-[2.5rem] relative overflow-hidden flex flex-col sm:flex-row items-center gap-10">
-                    
-                    <div class="absolute -right-12 -bottom-12 text-teal-500/10 text-[12rem] font-black pointer-events-none select-none">R</div>
-                    <div class="absolute top-0 left-1/4 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="luxury-card p-8 sm:p-14 rounded-[2.5rem] relative overflow-hidden flex flex-col sm:flex-row items-center gap-10 animate-super-glow">
+                    <div class="absolute -right-12 -bottom-12 text-emerald-500/10 text-[12rem] font-black pointer-events-none select-none">R</div>
+                    <div class="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-                    <!-- Founder Photo (Using IMG_20260604_22374...) -->
+                    <!-- Founder Photo -->
                     <div class="shrink-0 relative group">
-                        <div class="absolute -inset-2 bg-gradient-to-r from-teal-400 via-emerald-400 to-amber-400 rounded-3xl blur-md opacity-80 group-hover:opacity-100 transition duration-500 animate-pulse"></div>
-                        <img src="IMG_20260604_22374..." alt="Bishwajit Dohutia - Founder" class="relative w-48 h-48 sm:w-56 sm:h-56 object-cover rounded-2xl border-4 border-teal-300 shadow-2xl transform group-hover:scale-[1.02] transition duration-300">
+                        <div class="absolute -inset-2 bg-gradient-to-r from-emerald-400 via-teal-400 to-amber-400 rounded-3xl blur-md opacity-80 group-hover:opacity-100 transition duration-500 animate-pulse"></div>
+                        <img src="IMG_20260604_22374..." alt="Bishwajit Dohutia - Founder" class="relative w-48 h-48 sm:w-56 sm:h-56 object-cover rounded-2xl border-4 border-emerald-300 shadow-2xl transform group-hover:scale-[1.02] transition duration-300">
                     </div>
 
-                    <!-- Founder Details, Quote & Contact Number -->
+                    <!-- Founder Details -->
                     <div class="relative z-10 text-center sm:text-left w-full">
                         <div class="inline-flex items-center space-x-2 bg-amber-500/20 text-amber-300 border border-amber-400/40 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-3">
                             <i class="fa-solid fa-crown text-amber-400"></i> <span>Founder & Visionary Creator</span>
                         </div>
                         <h4 class="font-black text-white text-3xl sm:text-4xl tracking-tight mb-1 drop-shadow-md">Bishwajit Dohutia</h4>
-                        <p class="text-teal-300 text-xs sm:text-sm font-semibold tracking-wide mb-2">MBA in Marketing Management | 8+ Years Corporate & Operations Excellence</p>
+                        <p class="text-emerald-300 text-xs sm:text-sm font-semibold tracking-wide mb-2">MBA in Marketing Management | 8+ Years Corporate & Operations Excellence</p>
                         
-                        <!-- Contact Phone Number Added Here -->
-                        <div class="mb-4 inline-flex items-center space-x-2 bg-teal-500/10 border border-teal-400/30 px-3.5 py-1.5 rounded-xl text-teal-300 text-xs font-bold">
-                            <i class="fa-solid fa-phone-volume text-teal-400"></i>
+                        <!-- Contact Phone Number -->
+                        <div class="mb-4 inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-400/30 px-3.5 py-1.5 rounded-xl text-emerald-300 text-xs font-bold">
+                            <i class="fa-solid fa-phone-volume text-emerald-400"></i>
                             <span>Direct Contact: +91 8486330619</span>
                         </div>
                         
-                        <div class="bg-slate-950/60 border-l-4 border-teal-400 p-4 rounded-r-2xl backdrop-blur-md shadow-inner">
+                        <div class="bg-slate-950/60 border-l-4 border-emerald-400 p-4 rounded-r-2xl backdrop-blur-md shadow-inner">
                             <p class="text-slate-200 text-sm sm:text-base leading-relaxed italic">
                                 "My vision is to reshape the modern recruitment landscape by building intuitive, tech-enabled solutions ensuring potential is never overshadowed by career breaks."
                             </p>
@@ -245,26 +350,26 @@
             </div>
         </section>
 
-        <!-- 5. Contact Us Section -->
-        <section id="contact" class="py-20 px-4 bg-slate-950/95 border-t border-teal-500/30">
+        <!-- 7. Contact Us Section -->
+        <section id="contact" class="py-20 px-4 bg-slate-950/95 border-t border-emerald-500/30">
             <div class="max-w-4xl mx-auto text-center">
                 <h3 class="text-3xl font-extrabold text-white mb-4">Connect With Restart AI</h3>
                 <p class="text-slate-300 text-sm mb-10">Reach out for corporate partnerships, talent acquisition, or platform access.</p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-                    <div class="bg-slate-900 border border-teal-500/30 p-6 rounded-2xl shadow-2xl hover:border-teal-400 transition">
-                        <div class="text-teal-400 text-xl mb-3"><i class="fa-solid fa-user"></i></div>
+                    <div class="luxury-card p-6 rounded-2xl shadow-2xl">
+                        <div class="text-emerald-400 text-xl mb-3"><i class="fa-solid fa-user"></i></div>
                         <h4 class="text-white font-bold text-sm mb-1">Founder / Contact</h4>
                         <p class="text-slate-300 text-xs">Bishwajit Dohutia</p>
-                        <p class="text-teal-300 text-xs mt-1 font-semibold">📞 +91 8486330619</p>
+                        <p class="text-emerald-300 text-xs mt-1 font-semibold">📞 +91 8486330619</p>
                     </div>
-                    <div class="bg-slate-900 border border-teal-500/30 p-6 rounded-2xl shadow-2xl hover:border-teal-400 transition">
-                        <div class="text-teal-400 text-xl mb-3"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="luxury-card p-6 rounded-2xl shadow-2xl">
+                        <div class="text-emerald-400 text-xl mb-3"><i class="fa-solid fa-envelope"></i></div>
                         <h4 class="text-white font-bold text-sm mb-1">Email Address</h4>
                         <p class="text-slate-300 text-xs">bishwajitdohutia1@gmail.com</p>
                     </div>
-                    <div class="bg-slate-900 border border-teal-500/30 p-6 rounded-2xl shadow-2xl hover:border-teal-400 transition">
-                        <div class="text-teal-400 text-xl mb-3"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="luxury-card p-6 rounded-2xl shadow-2xl">
+                        <div class="text-emerald-400 text-xl mb-3"><i class="fa-solid fa-location-dot"></i></div>
                         <h4 class="text-white font-bold text-sm mb-1">Headquarters</h4>
                         <p class="text-slate-300 text-xs">Tinsukia, Assam, India</p>
                     </div>
@@ -274,8 +379,33 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 border-t border-slate-800 py-8 text-center text-slate-400 text-xs z-20 relative">
-        <p>&copy; 2026 Restart AI. Built by Bishwajit Dohutia (Tinsukia, Assam). All rights reserved.</p>
+    <footer class="bg-slate-950 border-t border-slate-800 py-12 px-4 text-center text-slate-400 text-xs z-20 relative">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-left">
+            <div>
+                <h5 class="text-white font-bold text-sm mb-2 uppercase tracking-wider">Restart AI Ecosystem</h5>
+                <p class="text-slate-400 text-xs leading-relaxed">Next-generation global HR recruitment consultancy and career-gap neutralization platform built for modern enterprises.</p>
+            </div>
+            <div>
+                <h5 class="text-white font-bold text-sm mb-2 uppercase tracking-wider">Quick Links</h5>
+                <ul class="space-y-1 text-xs">
+                    <li><a href="#about" class="hover:text-emerald-400 transition">About Company</a></li>
+                    <li><a href="#modules" class="hover:text-emerald-400 transition">AI Modules</a></li>
+                    <li><a href="#careers" class="hover:text-emerald-400 transition">Career Openings</a></li>
+                    <li><a href="#founder" class="hover:text-emerald-400 transition">Founder Profile</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-bold text-sm mb-2 uppercase tracking-wider">Legal & Compliance</h5>
+                <p class="text-slate-400 text-xs leading-relaxed">Protected under strict anti-ghosting SLA protocols and cryptographic neural data masking.</p>
+                <div class="mt-4 flex space-x-3 text-emerald-400 text-sm">
+                    <a href="https://lnkd.in/djCVFgPT" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:bishwajitdohutia1@gmail.com" class="hover:text-white transition"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-slate-900 pt-6">
+            <p>&copy; 2026 Restart AI. Built by Bishwajit Dohutia (Tinsukia, Assam, India). All rights reserved.</p>
+        </div>
     </footer>
 
     <!-- JavaScript Execution Logic -->
@@ -314,6 +444,23 @@
 
         function testCvMasking() {
             showUniqueOutput(`🧠 Neural CV Masking Engine: Age, gender, and break timestamps successfully scrubbed. Pure skill vector transmitted.`);
+        }
+
+        function applyJob(jobTitle) {
+            alert(`Redirecting to AI Application Gateway for: ${jobTitle}. Please upload your verified CV.`);
+        }
+
+        function submitGeneralApplication() {
+            const name = document.getElementById('applicantName').value;
+            const email = document.getElementById('applicantEmail').value;
+            const notice = document.getElementById('careerNotice');
+            if(name && email) {
+                notice.innerHTML = `✅ Thank you, ${name}! Your profile has been queued in Restart AI Talent Network.`;
+                notice.classList.remove('hidden');
+            } else {
+                notice.innerHTML = `⚠️ Please enter your name and email address.`;
+                notice.classList.remove('hidden');
+            }
         }
     </script>
 </body>
