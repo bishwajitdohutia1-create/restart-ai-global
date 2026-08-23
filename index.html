@@ -17,7 +17,6 @@
             overflow-x: hidden;
         }
 
-        /* Ultra Premium Neon Glowing Animations */
         @keyframes ultraGlow {
             0%, 100% { box-shadow: 0 0 40px rgba(20, 184, 166, 0.6), inset 0 0 20px rgba(20, 184, 166, 0.3); transform: scale(1); }
             50% { box-shadow: 0 0 80px rgba(20, 184, 166, 0.9), inset 0 0 40px rgba(20, 184, 166, 0.6); transform: scale(1.03); }
@@ -30,32 +29,21 @@
         }
         .float-animation { animation: floatSlow 5s infinite ease-in-out; }
 
-        @keyframes scanline {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(1000%); }
-        }
-        .scanner-beam::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; height: 4px;
-            background: linear-gradient(90deg, transparent, #2dd4bf, transparent);
-            animation: scanline 4s linear infinite;
-        }
-
-        .hero-bg {
-            background-image: linear-gradient(to bottom, rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.98)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80');
+        /* Corporate Team Working Together Office Background Theme */
+        .corporate-team-bg {
+            background-image: linear-gradient(to bottom, rgba(2, 6, 23, 0.82), rgba(2, 6, 23, 0.96)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
         }
 
-        .features-bg {
-            background-image: linear-gradient(to bottom, rgba(2, 6, 23, 0.92), rgba(2, 6, 23, 0.99)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');
+        .features-team-bg {
+            background-image: linear-gradient(to bottom, rgba(2, 6, 23, 0.90), rgba(2, 6, 23, 0.98)), url('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
         }
 
-        .founder-bg {
-            background-image: linear-gradient(to bottom, rgba(2, 6, 23, 0.9), rgba(2, 6, 23, 0.97)), url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80');
+        .founder-team-bg {
+            background-image: linear-gradient(to bottom, rgba(2, 6, 23, 0.88), rgba(2, 6, 23, 0.96)), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
         }
@@ -103,8 +91,8 @@
     </header>
 
     <main class="flex-grow">
-        <!-- Hero Section with Ultra Animations -->
-        <section class="relative hero-bg py-32 px-4 text-center overflow-hidden scanner-beam">
+        <!-- Hero Section with Corporate Team Office Theme -->
+        <section class="relative corporate-team-bg py-32 px-4 text-center overflow-hidden">
             <div class="max-w-4xl mx-auto flex flex-col items-center relative z-10">
                 
                 <div class="inline-flex items-center space-x-2 bg-teal-500/10 text-teal-400 border border-teal-500/30 px-5 py-2 rounded-full text-xs font-bold mb-6 tracking-wider uppercase backdrop-blur-md float-animation">
@@ -132,8 +120,8 @@
             </div>
         </section>
 
-        <!-- Live Interactive AI Modules Hub (25+ Suite with Ultra Styling) -->
-        <section id="modules" class="features-bg py-24 px-4 sm:px-6 lg:px-8 border-y border-slate-800/80 relative">
+        <!-- Live Interactive AI Modules Hub (25+ Suite) -->
+        <section id="modules" class="features-team-bg py-24 px-4 sm:px-6 lg:px-8 border-y border-slate-800/80 relative">
             <div class="max-w-7xl mx-auto relative z-10">
                 <div class="text-center max-w-2xl mx-auto mb-16">
                     <h3 class="text-3xl font-extrabold text-white mb-3">Live AI Employment & Recruitment Modules</h3>
@@ -179,16 +167,16 @@
             </div>
         </section>
 
-        <!-- Founder Vision Section with Ultra Premium Photo Frame -->
-        <section id="founder" class="founder-bg py-24 px-4 relative">
+        <!-- Founder Vision Section with Professional Photo -->
+        <section id="founder" class="founder-team-bg py-24 px-4 relative">
             <div class="max-w-4xl mx-auto relative z-10">
                 <div class="bg-slate-900/95 border-2 border-teal-500/50 p-8 sm:p-12 rounded-3xl shadow-2xl relative overflow-hidden backdrop-blur-xl flex flex-col sm:flex-row items-center gap-8 ultra-glow-box">
                     <div class="absolute -right-10 -bottom-10 text-teal-500/10 text-9xl font-black pointer-events-none">R</div>
                     
-                    <!-- Founder Photo with Neon Frame -->
+                    <!-- Founder Photo (Using your uploaded image filename IMG_20260604_22374...) -->
                     <div class="shrink-0 relative">
                         <div class="absolute -inset-1 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-2xl blur opacity-75 animate-pulse"></div>
-                        <img src="1000740952.jpg" alt="Bishwajit Dohutia - Founder" class="relative w-44 h-44 sm:w-52 sm:h-52 object-cover rounded-2xl border-2 border-teal-300 shadow-2xl">
+                        <img src="IMG_20260604_22374..." alt="Bishwajit Dohutia - Founder" class="relative w-44 h-44 sm:w-52 sm:h-52 object-cover rounded-2xl border-2 border-teal-300 shadow-2xl">
                     </div>
 
                     <div>
